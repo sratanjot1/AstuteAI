@@ -27,13 +27,6 @@ body {
     background-color: var(--neutral);
     color: var(--dark);
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
-}
-
-/* Main container */
-.stApp {
-    background-color: var(--neutral);
 }
 
 /* Landing page styles */
@@ -45,8 +38,7 @@ body {
 }
 
 .landing-header {
-    margin-bottom: 2rem;
-    padding: 1rem;
+    margin-bottom: 3rem;
 }
 
 .landing-title {
@@ -55,62 +47,25 @@ body {
     color: var(--dark);
     margin-bottom: 1rem;
     line-height: 1.2;
-    background: linear-gradient(to right, var(--primary), var(--tertiary));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
 }
 
 .landing-subtitle {
     font-size: 1.25rem;
     color: var(--gray-500);
     max-width: 600px;
-    margin: 0 auto 2rem auto;
-}
-
-/* Centered input styling */
-.stTextInput>div>div>input {
-    text-align: center;
-    font-size: 1rem;
-    padding: 0.75rem 1rem;
-    border: 2px solid var(--gray-200);
-    border-radius: 12px;
-    width: 100%;
-    max-width: 500px;
     margin: 0 auto;
 }
 
-.stTextInput>div>div>div {
-    text-align: center;
-    margin-bottom: 0.5rem;
-    font-weight: 500;
-    color: var(--gray-500);
-    font-size: 1rem;
-}
-
-/* Button styling */
-.stButton>button {
-    border-radius: 50px !important;
-    padding: 0.75rem 1.5rem !important;
-    font-weight: 600 !important;
-    transition: all 0.3s ease !important;
-    margin: 1rem auto !important;
-    display: block !important;
-    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%) !important;
-    border: none !important;
-    color: white !important;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.stButton>button:hover {
-    transform: translateY(-2px) !important;
-    box-shadow: 0 6px 12px rgba(139, 92, 246, 0.2) !important;
+.logo-text {
+    background: linear-gradient(to right, var(--primary), var(--tertiary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 /* Section headers */
 .section-header {
     margin-bottom: 2rem;
-    text-align: center;
 }
 
 .section-header h2 {
@@ -121,7 +76,26 @@ body {
 
 .section-header p {
     color: var(--gray-500);
-    font-size: 1.1rem;
+}
+
+/* Buttons */
+.stButton>button {
+    border-radius: 50px !important;
+    padding: 0.5rem 1.5rem !important;
+    font-weight: 600 !important;
+    transition: all 0.3s ease !important;
+}
+
+.stButton>button:first-child:not(:disabled) {
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
+}
+
+.stButton>button:first-child:not(:disabled):hover {
+    background-color: var(--primary-dark) !important;
+    border-color: var(--primary-dark) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
 }
 
 /* Keyword chips */
@@ -134,7 +108,17 @@ body {
     display: inline-block;
     font-size: 0.9rem;
     font-weight: 500;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar styles */
+.sidebar-header {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--gray-200);
+    margin-bottom: 1rem;
+}
+
+.sidebar-header h3 {
+    color: var(--primary-dark);
 }
 
 /* Expanders */
@@ -142,13 +126,11 @@ body {
     border: 1px solid var(--gray-200) !important;
     border-radius: 12px !important;
     margin-bottom: 1rem;
-    background-color: white;
 }
 
 .stExpander .st-emotion-cache-1q7spjk {
     color: var(--primary-dark) !important;
     font-weight: 600 !important;
-    font-size: 1.1rem !important;
 }
 
 /* Metrics */
@@ -157,38 +139,6 @@ body {
     border-radius: 12px;
     padding: 1rem;
     background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-}
-
-/* Progress bars */
-.stProgress>div>div>div {
-    background: linear-gradient(90deg, var(--primary), var(--accent)) !important;
-}
-
-/* Charts */
-.plotly-graph-div {
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Success/error messages */
-.stAlert {
-    border-radius: 12px !important;
-}
-
-/* Radio buttons */
-.stRadio>div {
-    background-color: white;
-    padding: 1rem;
-    border-radius: 12px;
-    border: 1px solid var(--gray-200);
-}
-
-/* Download buttons */
-.stDownloadButton>button {
-    background-color: var(--secondary) !important;
-    border-color: var(--secondary) !important;
 }
 
 /* Responsive adjustments */
@@ -204,48 +154,4 @@ body {
     .landing-subtitle {
         font-size: 1rem;
     }
-    
-    .section-header h2 {
-        font-size: 1.5rem;
-    }
-    
-    .stTextInput>div>div>input {
-        width: 90%;
-    }
-}
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-}
-
-::-webkit-scrollbar-track {
-    background: var(--gray-100);
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-    background: var(--primary-light);
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: var(--primary);
-}
-
-/* Blinking cursor effect */
-@keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
-}
-
-.blink {
-    animation: blink 1s step-end infinite;
-    color: var(--accent-light);
-}
-
-/* Gradient backgrounds */
-.gradient-bg {
-    background: linear-gradient(135deg, var(--primary-light) 0%, var(--accent-light) 100%);
 }
