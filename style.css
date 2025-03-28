@@ -29,31 +29,31 @@ body {
     line-height: 1.6;
 }
 
-/* Landing page styles */
-.landing-container {
-    max-width: 800px;
+/* Login page styles */
+.login-container {
+    max-width: 600px;
     margin: 2rem auto;
     padding: 2rem;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.login-header {
     text-align: center;
+    margin-bottom: 2rem;
 }
 
-.landing-header {
-    margin-bottom: 3rem;
-}
-
-.landing-title {
-    font-size: 3rem;
+.login-title {
+    font-size: 2.5rem;
     font-weight: 700;
     color: var(--dark);
-    margin-bottom: 1rem;
-    line-height: 1.2;
+    margin-bottom: 0.5rem;
 }
 
-.landing-subtitle {
-    font-size: 1.25rem;
+.login-subtitle {
+    font-size: 1.1rem;
     color: var(--gray-500);
-    max-width: 600px;
-    margin: 0 auto;
 }
 
 .logo-text {
@@ -61,6 +61,40 @@ body {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+}
+
+.form-title {
+    color: var(--primary-dark);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Main app styles */
+.app-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.app-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 0.5rem;
+}
+
+.app-subtitle {
+    font-size: 1.1rem;
+    color: var(--gray-500);
+}
+
+.logo-blink {
+    color: var(--accent-light);
+    animation: blink 2s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
 }
 
 /* Section headers */
@@ -121,6 +155,28 @@ body {
     color: var(--primary-dark);
 }
 
+.sidebar-footer {
+    padding: 1rem 0;
+    border-top: 1px solid var(--gray-200);
+    margin-top: 1rem;
+}
+
+.logout-btn {
+    background-color: var(--gray-200);
+    color: var(--dark);
+    border: none;
+    border-radius: 50px;
+    padding: 0.5rem 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.logout-btn:hover {
+    background-color: var(--gray-300);
+}
+
 /* Expanders */
 .stExpander {
     border: 1px solid var(--gray-200) !important;
@@ -143,15 +199,15 @@ body {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    .landing-container {
+    .login-container {
         padding: 1.5rem;
     }
     
-    .landing-title {
+    .login-title {
         font-size: 2rem;
     }
     
-    .landing-subtitle {
-        font-size: 1rem;
+    .app-title {
+        font-size: 2rem;
     }
 }
